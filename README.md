@@ -18,12 +18,12 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
   - [ ] Führung Taskliste
   - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
     
-- [s] 4. Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
+- [x] 4. Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
   - [x] Es befinden sich gesamt 3 Fehler im Source Code.
   - [x] Bei Bedarf Optimieren Sie das Queue Beispiel.
   - [x] Ergänzen Sie das Beispiel nach eigenen Ermessen um es testen zu können.
   
-- [ ] 5. Erstellen Sie für Klasse und alle Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
+- [x] 5. Erstellen Sie für Klasse und alle Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
   - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
   
 - [ ] 6. Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
@@ -64,26 +64,32 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 #Dokumentation#
 
+Zu 1.) Die Tasklist wurde in die Datei Readme.md kopiert und entsprechend der Markdown Syntax angepasst.
+
+Zu 2.) Die Datein wurden aus dem Vorlagen-Repository eingefügt.
+
 Zu 4.) Debugging 
  1. Fehler im Konstruktor: "public StringQueue(int maxsize){" ist falsch. Richtig: "public StringQueue(int maxSize){".
    Fehler im Konstruktor: "maxSize = maxSize" ist falsch. Richtig: "this.maxSize = maxSize".
 	Bug:
-	![Construktor Bug](./media/02_bug_01.png)
+	![Construktor Bug](./media/02_bug_01.PNG)
 	Fix:
-	![Construktor Fix](./media/02_fix_01.png)
+	![Construktor Fix](./media/02_fix_01.PNG)
 
  2. Fehler in remove() Methode: Vor der if-Abfrage wird mit 'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
 	Bug:
-	![remove() Bug](./media/02_bug_02.png)
+	![remove() Bug](./media/02_bug_02.PNG)
 	Fix:
-	![remove() Fix](./media/02_fix_02.png)
+	![remove() Fix](./media/02_fix_02.PNG)
 
  3. Fehler in poll() Methode: Hier wird ein elment nur entfernt wenn die "size == 0" ist, dies wurde auf "size > 0" geändert.
 	Bug:
-	![poll() Bug](./media/02_bug_03.png)
+	![poll() Bug](./media/02_bug_03.PNG)
 	Fix:
-	![poll() Fix](./media/02_fix_03.png)
+	![poll() Fix](./media/02_fix_03.PNG)
 
- Anm: "private List<String> elements = new ArrayList<String>();" wurde vereinfacht durch "private List<String> elements = new ArrayList<>();"
+  Anm: "private List<String> elements = new ArrayList<String>();" wurde vereinfacht durch "private List<String> elements = new ArrayList<>();"
 
  4. Der Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
+
+Zu 5.) Es wurden JavaDoc Kommentare zur Klasse und zu den Methoden hinzugefügt.
