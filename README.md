@@ -1,16 +1,17 @@
-# Software Configuration Management #
+# Lab Report #
+## Vertiefende Gesamtwiederholung ##
 
-**EDUCATION Repository**
+Student01: Thomas Pretterhofer
+Student02: Florian Reisinger
 
-## Test Automation with JUnit ##
+Repository: <a href="https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer">https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer</a>
 
-### Queue Exercise ###
 
 # Tasklist #
 
 - [x] Übertragen Angabe Taskliste in Markdown Readme
 
-- [ ] Einspielen Queue Vorlage aus Repository:  
+- [x] Einspielen Queue Vorlage aus Repository:  
 https://github.com/michaelulm/software-configuration-management/tree/master/test-automation/Queue  
             
 - [ ] Taskergebnisse Schritt für Schritt auf Git stellen
@@ -58,3 +59,27 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
   
 - [ ] Überprüfung Vollständigkeit der Abgabe
 - [ ] Abgabe PDF Version der Abgabe
+
+---
+
+#Dokumentation#
+ 
+1. Fehler im Konstruktor: "public StringQueue(int maxsize){" ist falsch. Richtig: "public StringQueue(int maxSize){".
+   Fehler im Konstruktor: "maxSize = maxSize" ist falsch. Richtig: "this.maxSize = maxSize".
+	Bug:
+	![Construktor Bug](./media/02_bug_01.png)
+	Fix:
+	![Construktor Fix](./media/02_fix_01.png)
+
+2. Fehler in remove() Methode: Vor der if-Abfrage wird mit 'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
+	Bug:
+	![remove() Bug](./media/02_bug_02.png)
+	Fix:
+	![remove() Fix](./media/02_fix_02.png)
+3. Fehler in poll() Methode: Hier wird ein elment nur entfernt wenn die "size == 0" ist, dies wurde auf "size > 0" geändert.
+	Bug:
+	![poll() Bug](./media/02_bug_03.png)
+	Fix:
+	![poll() Fix](./media/02_fix_03.png)
+
+Anm: "private List<String> elements = new ArrayList<String>();" wurde vereinfacht durch "private List<String> elements = new ArrayList<>();"
