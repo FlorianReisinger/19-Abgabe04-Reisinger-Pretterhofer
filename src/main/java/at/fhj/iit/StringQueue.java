@@ -1,22 +1,18 @@
 package at.fhj.iit;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-// there's some Bugs included, try to debug the code and fix the Bugs
-// there are different Bugs, wrong implementation, typos, ...
-// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
-
 public class StringQueue implements Queue {
 	
-	private List<String> elements = new ArrayList<String>();
+	private List<String> elements = new ArrayList<>();
 	private int maxSize = 5;
 
-	public StringQueue(int maxsize){
-		maxSize = maxSize;
+	public StringQueue(int maxSize){
+		this.maxSize = maxSize;
 	}
-	
+
+import java.util.ArrayList;
 	@Override
 	public boolean offer(String obj) {
 		if(elements.size()!= maxSize)
@@ -31,7 +27,7 @@ public class StringQueue implements Queue {
 	public String poll() {
 		String element = peek();
 		
-		if(elements.size() == 0){
+		if(elements.size() > 0){
 			elements.remove(0);
 		}
 		
@@ -40,8 +36,7 @@ public class StringQueue implements Queue {
 
 	@Override
 	public String remove() {
-		String element = poll();		
-		element = "";
+		String element = poll();
 		if(element == null)
 			throw new NoSuchElementException("there's no element any more");
 		
