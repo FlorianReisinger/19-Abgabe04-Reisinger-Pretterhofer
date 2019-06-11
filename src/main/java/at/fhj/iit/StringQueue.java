@@ -1,9 +1,11 @@
 package at.fhj.iit;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.ArrayList;
-
 
 /**
  * Queue Implementation of <code>Queue</code> Interface.
@@ -16,6 +18,8 @@ import java.util.ArrayList;
  * @see Queue
  */
 public class StringQueue implements Queue {
+
+    private static final Logger logger = LogManager.getLogger(StringQueue.class);
 
     /**
      * Stores the string values of this queue
@@ -32,6 +36,7 @@ public class StringQueue implements Queue {
      * Constructs a queue with a maximum of 5 Elements.
      */
     public StringQueue() {
+        logger.info("StringQueue(): Default constructor with default maxSize " + maxSize);
     }
 
     /**
@@ -41,10 +46,13 @@ public class StringQueue implements Queue {
      * @param maxSize the maxium size of the queue
      */
     public StringQueue(int maxSize) {
+        logger.info("StringQueue(): Constructor with maxSize " + maxSize);
         if (maxSize <= 0) {
+            logger.error("throw IllegalArgumentException(Size of StringQueue must be greater than 0!)");
             throw new IllegalArgumentException("Size of StringQueue must be greater than 0!");
         } else {
             this.maxSize = maxSize;
+
         }
     }
 
@@ -64,11 +72,12 @@ public class StringQueue implements Queue {
      */
     @Override
     public boolean offer(String obj) {
-        if (elements.size() != maxSize)
+        logger.info("Method offer() called.");
+        if (elements.size() != maxSize) {
             elements.add(obj);
-        else
+        } else {
             return false;
-
+        }
         return true;
     }
 
@@ -83,6 +92,7 @@ public class StringQueue implements Queue {
      */
     @Override
     public String poll() {
+        logger.info("Method poll() called.");
         String element = peek();
 
         if (elements.size() > 0) {
@@ -104,9 +114,12 @@ public class StringQueue implements Queue {
      */
     @Override
     public String remove() {
+        logger.info("Method remove() called.");
         String element = poll();
-        if (element == null)
+        if (element == null) {
+            logger.error("throw NoSuchElementException (No file in the queue)");
             throw new NoSuchElementException("there's no element any more");
+        }
 
         return element;
     }
@@ -122,11 +135,14 @@ public class StringQueue implements Queue {
      */
     @Override
     public String peek() {
+        logger.info("Method peek() called.");
         String element;
-        if (elements.size() > 0)
+
+        if (elements.size() > 0) {
             element = elements.get(0);
-        else
+        } else {
             element = null;
+        }
 
         return element;
     }
@@ -142,10 +158,14 @@ public class StringQueue implements Queue {
      */
     @Override
     public String element() {
+        logger.info("Method element() called.");
         String element = peek();
-        if (element == null)
-            throw new NoSuchElementException("there's no element any more");
+        if (element == null) {
+            logger.error("throw NoSuchElementException, if there is no " +
+                    "element in the queue anymore");
 
+            throw new NoSuchElementException("there's no element any more");
+        }
         return element;
     }
 

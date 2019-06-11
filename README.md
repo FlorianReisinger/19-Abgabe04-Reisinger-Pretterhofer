@@ -33,17 +33,17 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
   - [x] JavaDoc Kommentare erstellen.
   - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
   
-- [ ] 7. Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
-  - [ ] EntwicklerInnen Informationen hinzufügen.
-  - [ ] Integration Logging Bibliothek log4j mittels Maven Dependencies.
+- [x] 7. Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
+  - [x] EntwicklerInnen Informationen hinzufügen.
+  - [x] Integration Logging Bibliothek log4j mittels Maven Dependencies.
   
-- [ ] 8. Log4j (Version 2) integrieren und in jeder Methode ins Log schreiben
-  - [ ] Siehe aktualisiertes Stack Beispiel.
-  - [ ] Erstellen Sie einen Statischen Logger der auf die Konsole schreibt.
-  - [ ] Konfigurieren Sie Logger über ein properties File.
-  - [ ] Geben Sie eine Info Lognachricht bei Aufruf einer jeden Methode aus.
-  - [ ] Geben Sie eine Error Lognachricht aus bevor Sie einen Fehler werfen.
-  - [ ] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
+- [x] 8. Log4j (Version 2) integrieren und in jeder Methode ins Log schreiben
+  - [x] Siehe aktualisiertes Stack Beispiel.
+  - [x] Erstellen Sie einen Statischen Logger der auf die Konsole schreibt.
+  - [x] Konfigurieren Sie Logger über ein properties File.
+  - [x] Geben Sie eine Info Lognachricht bei Aufruf einer jeden Methode aus.
+  - [x] Geben Sie eine Error Lognachricht aus bevor Sie einen Fehler werfen.
+  - [x] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
   
 - [ ] 9. Maven Site Dokumentation erstellen
   - [ ] Inklusive Javadoc Code und Javadoc Test Klassen
@@ -161,3 +161,8 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 5.5)Build Bereich(Automatische Dokumentation)
 
 ![automatedDocumentation pom.xml](./media/05_pom_05.PNG)
+
+6) Log4J laut Anweisung integriert. 
+ Bei jeden Methodenaufrauf wird 
+ 
+![Log4J Ausschnitt Konsolenausgabe](./media/06_Log4J.PNG)
