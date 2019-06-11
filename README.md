@@ -137,3 +137,27 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     JUnit Testklasse Teil 2:
     
     ![JavaDoc StringQueueTest 2](./media/04_JUnit_StringQueueTest_2.PNG)
+    
+    
+5.) Abänderungen der pom.xml, sodass die Entwicklerinformationen hinzugefügt worden sind, einen automatische Dokumentation mit Hilfe von Maven-Site erstellt werden kann und zusätzlich wurde noch Log4j (Version 2) integriert.
+
+5.1)Entwickler in das Konfigurationsfile hinzufügen:
+
+![developer pom.xml](./media/05_pom_01.PNG)
+    
+ 5.2) Log4j (Version 2) integrieren
+ 
+![log4j pom.xml](./media/05_pom_02.PNG)
+
+ 5.3)Automatisch generierte Dokumentation(Maven Site) mit integration von JavaDoc!
+ Report Bereich(Automatische Dokumentation):
+ 
+![automatedDocumentation pom.xml](./media/05_pom_03.PNG)
+    
+5.4) Report Bereich 02(Automatische Dokumentation):
+
+![automatedDocumentation pom.xml](./media/05_pom_04.PNG)
+
+5.5)Build Bereich(Automatische Dokumentation)
+
+![automatedDocumentation pom.xml](./media/05_pom_05.PNG)

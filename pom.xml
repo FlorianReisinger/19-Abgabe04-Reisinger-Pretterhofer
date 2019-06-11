@@ -8,24 +8,116 @@
     <artifactId>Queue</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-	<developers>
-		<developer>
-		  <id>michaelulm</id>
-		  <name>Michael Ulm</name>
-		  <email>michael.ulm@fh-joanneum.at</email>
-		  <url>https://www.michael-ulm.at</url>
-		  <organization>FH JOANNEUM GmbH</organization>
-		  <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
-		  <roles>
-			<role>Lecturer</role>
-		  </roles>
-		  <timezone>Europe/Vienna</timezone>
-		  <properties>
-			<picUrl>https://avatars2.githubusercontent.com/u/15637184</picUrl>
-		  </properties>
-		</developer>     
-	</developers>
-	
+
+    <!-- developer block -->
+    <developers>
+        <!-- developer01 -->
+        <developer>
+            <id>florianreisinger</id>
+            <name>Florian Reisinger</name>
+            <email>florian.reisinger@edu.campus02.at</email>
+            <url></url>
+            <organization>FH Campus 02</organization>
+            <organizationUrl>https://www.campus02.at/</organizationUrl>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+            <properties>
+                <picUrl>https://avatars0.githubusercontent.com/u/37405058</picUrl>
+            </properties>
+        </developer>
+        <!-- developer02 -->
+        <developer>
+            <id>thomaspretterhofer</id>
+            <name>Thomas Pretterhofer</name>
+            <email>thomas.pretterhofer@edu.campus02.at</email>
+            <url></url>
+            <organization>FH Campus 02</organization>
+            <organizationUrl>https://www.campus02.at/</organizationUrl>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+            <properties>
+                <picUrl>https://avatars1.githubusercontent.com/u/29402928</picUrl>
+            </properties>
+        </developer>
+    </developers>
+
+
+
+    <!-- reporting block -->
+    <reporting>
+        <plugins>
+
+            <!-- maven site for documentation -->
+            <!-- manual upgraded maven site plugin, because 3.3 had an error -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+            <!-- reporting project information -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+
+            <!-- java doc support for maven site -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <reportSets>
+
+                    <!-- reports our javadocs in our src code and test code -->
+                    <reportSet>
+                        <reports>
+                            <report>javadoc</report>
+                            <report>test-javadoc</report>
+                        </reports>
+                    </reportSet>
+
+                    <!-- aggregate reportSet, to define in poms having modules -->
+                    <reportSet>
+                        <id>aggregate</id>
+                        <inherited>false</inherited><!-- don't run aggregate in child modules -->
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+                <version>3.1.0</version>
+
+            </plugin>
+
+            <!-- integrate test results -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M3</version>
+            </plugin>
+
+            <!-- Cross References -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+
+            <!-- integrate test Code Coverage -->
+            <plugin>
+                <artifactId>maven-clover-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+
+        </plugins>
+    </reporting>
+
+
+    <!-- build block -->
     <build>
         <plugins>
             <plugin>
@@ -36,15 +128,43 @@
                     <release>11</release>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
         </plugins>
     </build>
 
+
+
+    <scm>
+        <connection>scm:git:https://github.com/FlorianReisinger?tab=repositories</connection>
+        <developerConnection>scm:git:https://github.com/FlorianReisinger?tab=repositories</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/FlorianReisinger?tab=repositories</url>
+    </scm>
+
+
+
+    <!-- dependencies block -->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.2</version>
         </dependency>
     </dependencies>
 </project>
