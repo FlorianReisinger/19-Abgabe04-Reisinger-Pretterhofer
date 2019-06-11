@@ -7,8 +7,9 @@ import java.util.ArrayList;
 
 /**
  * Queue Implementation of <code>Queue</code> Interface.
- * supports String Values and can be initialized with a maximum number
- * of items.
+ * Supports String Values and can be initialized with a maximum number
+ * of items. Elements will be added at the end of the queue.If you
+ * poll an element, this element will be the oldest one in the queue.
  *
  * @author Florian Reisinger und Thomas Pretterhofer
  * @version 1.0

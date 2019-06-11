@@ -1,11 +1,13 @@
 # Lab Report #
 ## Vertiefende Gesamtwiederholung ##
 
+
 Student01: Thomas Pretterhofer
+
 Student02: Florian Reisinger
 
-Repository: <a href="https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer">https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer</a>
 
+Repository: <a href="https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer">https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer</a>
 
 # Tasklist #
 
@@ -24,12 +26,12 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
   - [x] Ergänzen Sie das Beispiel nach eigenen Ermessen um es testen zu können.
   
 - [x] 5. Erstellen Sie für Klasse und alle Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
-  - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
+  - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
   
-- [ ] 6. Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
-  - [ ] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
-  - [ ] JavaDoc Kommentare erstellen.
-  - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
+- [x] 6. Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
+  - [x] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
+  - [x] JavaDoc Kommentare erstellen.
+  - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
   
 - [ ] 7. Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
   - [ ] EntwicklerInnen Informationen hinzufügen.
@@ -62,34 +64,76 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 ---
 
-#Dokumentation#
+# Dokumentation #
 
-Zu 1.) Die Tasklist wurde in die Datei Readme.md kopiert und entsprechend der Markdown Syntax angepasst.
+1.) Die Tasklist wurde in die Datei Readme.md kopiert und entsprechend der Markdown Syntax angepasst. Weiters wurde die Projektvorlage Queue in das Repository kopiert.
 
-Zu 2.) Die Datein wurden aus dem Vorlagen-Repository eingefügt.
+2.) Debugging der Klasse "Queue.java"
 
-Zu 4.) Debugging 
- 1. Fehler im Konstruktor: "public StringQueue(int maxsize){" ist falsch. Richtig: "public StringQueue(int maxSize){".
-   Fehler im Konstruktor: "maxSize = maxSize" ist falsch. Richtig: "this.maxSize = maxSize".
-	Bug:
-	![Construktor Bug](./media/02_bug_01.PNG)
-	Fix:
-	![Construktor Fix](./media/02_fix_01.PNG)
 
- 2. Fehler in remove() Methode: Vor der if-Abfrage wird mit 'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
-	Bug:
-	![remove() Bug](./media/02_bug_02.PNG)
-	Fix:
-	![remove() Fix](./media/02_fix_02.PNG)
+- Bugs:
+    1.1) **Fehler** im Konstruktor: "public StringQueue(int     maxsize){" ist falsch.
+    **Richtig:** "public    StringQueue(int maxSize){".
+    1.2)**Fehler** im Konstruktor: "maxSize = maxSize" ist falsch.
+    **Richtig:** "this.maxSize = maxSize".
+    
+    Bug:
+    ![Construktor Bug](./media/02_bug_01.PNG)
+    
+    Fix:
+    ![Construktor Fix](./media/02_fix_01.PNG)
+      
+    2.) **Fehler** in remove() Methode: Vor der if-Abfrage wird mit
+    'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
+    **Lösung:** Entfernen dieser Zeile, da diese nicht sinnvoll.
+    
+    Bug:
+    ![remove() Bug](./media/02_bug_02.PNG)
 
- 3. Fehler in poll() Methode: Hier wird ein elment nur entfernt wenn die "size == 0" ist, dies wurde auf "size > 0" geändert.
-	Bug:
-	![poll() Bug](./media/02_bug_03.PNG)
-	Fix:
-	![poll() Fix](./media/02_fix_03.PNG)
+  Fix:
+  ![remove() Fix](./media/02_fix_02.PNG)
 
-  Anm: "private List<String> elements = new ArrayList<String>();" wurde vereinfacht durch "private List<String> elements = new ArrayList<>();"
+    3.) **Fehler** in poll() Methode: Hier wird ein Element nur entfernt wenn die    "size == 0" ist, dies würde nie ein Element löschen solange die Queue nicht leer ist, wäre diese leer würde ein Element entfernt werden, welches eine Exception werfen würde.
+    **Lösung:** Änderung der If-Abfrage auf "size > 0", sodass dies solange möglich ist, bis die Queue, keine Elemente mehr hat.
+    
+    Bug:
+    ![poll() Bug](./media/02_bug_03.PNG)
+    
+    Fix:
+    ![poll() Fix](./media/02_fix_03.PNG)
+    
+- Erweiterungen/Optimierungen:
+    - Der vorgegebene Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
+    - Default Constructor wurde manuell hinzugefügt, um den angegebenen Wert(int maxSize = 5) als default Wert zu nutzen und zu testen, da dieser sonst keine Funktion hat.
 
- 4. Der Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
+3.) Es wurden JavaDoc Kommentare zur Klasse und zu den Methoden hinzugefügt.
+- Nach dem hinzufügen der JavaDoc-Kommentare, haben wir einen JavaDoc-Bericht generiert:
 
-Zu 5.) Es wurden JavaDoc Kommentare zur Klasse und zu den Methoden hinzugefügt.
+    Overview:
+
+    ![JavaDoc Overview](./media/03_javaDoc_overview.PNG)
+
+    Interface:
+    
+    !JavaDoc Queue](./media/03_javaDoc_Queue.PNG)
+    
+    StringQueue-Klasse:
+    
+    ![JavaDoc StringQueue](./media/03_javaDoc_StringQueue.PNG)
+
+4.) Als nächstes werden Junit-Testcases in der Testklasse implementiert.
+- Test Default Konstruktor: Es wird getestet ob die Standard-Größe von 5 korrekt ist.
+- Test Konstruktor: Bei Queue-Größen von kleiner gleich null wird eine Exception geworfen, da die Queue mindestens 1 Element haben muss.
+- Alle Methoden werden einmal mit einer Queue-Größe von 1 (minimale Größe) und einer Queue-Größe von 99 (großer Wert) getestet.
+
+    Overview mit JUnit Testklasse:
+    
+    ![JavaDoc Overview](./media/04_JUnit_Overview.PNG)
+
+    JUnit Testklasse Teil 1:
+    
+    ![JavaDoc StringQueueTest 1](./media/04_JUnit_StringQueueTest_1.PNG)
+
+    JUnit Testklasse Teil 2:
+    
+    ![JavaDoc StringQueueTest 2](./media/04_JUnit_StringQueueTest_2.PNG)

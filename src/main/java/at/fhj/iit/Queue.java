@@ -1,5 +1,16 @@
 package at.fhj.iit;
 
+/**
+ * Interface for a queue class.
+ * A queue is similar to an Stack, but the difference is,
+ * that a queue works with FIFO-Principle and the stack with
+ * LIFO-Principle.
+ * When you add a element, it will be placed at the end of
+ * the queue. So you have the workflow "First in, first out"!
+ *
+ * @version 1.0.0
+ * @author Florian Reisinger, Thomas Pretterhofer
+ */
 public interface Queue {
 	
 	/**
