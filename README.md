@@ -73,9 +73,10 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 
 - Bugs:
-    1.1) **Fehler** im Konstruktor: "public StringQueue(int     maxsize){" ist falsch.
-    **Richtig:** "public    StringQueue(int maxSize){".
-    1.2)**Fehler** im Konstruktor: "maxSize = maxSize" ist falsch.
+    2.1.1) **Fehler** im Konstruktor: "public StringQueue(int maxsize){" ist falsch.
+    **Richtig:** "public StringQueue(int maxSize){".
+
+    2.1.2)**Fehler** im Konstruktor: "maxSize = maxSize" ist falsch.
     **Richtig:** "this.maxSize = maxSize".
     
     Bug:
@@ -84,17 +85,17 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     Fix:
     ![Construktor Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_01.PNG)
       
-    2.) **Fehler** in remove() Methode: Vor der if-Abfrage wird mit
+    2.2) **Fehler** in remove() Methode: Vor der if-Abfrage wird mit
     'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
     **Lösung:** Entfernen dieser Zeile, da diese nicht sinnvoll.
     
     Bug:
     ![remove() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_02.PNG)
 
-  Fix:
-  ![remove() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_02.PNG)
+    Fix:
+    ![remove() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_02.PNG)
 
-    3.) **Fehler** in poll() Methode: Hier wird ein Element nur entfernt wenn die    "size == 0" ist, dies würde nie ein Element löschen solange die Queue nicht leer ist, wäre diese leer würde ein Element entfernt werden, welches eine Exception werfen würde.
+    2.3) **Fehler** in poll() Methode: Hier wird ein Element nur entfernt wenn die    "size == 0" ist, dies würde nie ein Element löschen solange die Queue nicht leer ist, wäre diese leer würde ein Element entfernt werden, welches eine Exception werfen würde.
     **Lösung:** Änderung der If-Abfrage auf "size > 0", sodass dies solange möglich ist, bis die Queue, keine Elemente mehr hat.
     
     Bug:
@@ -116,7 +117,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
     Interface:
     
-    !JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_Queue.PNG)
+    ![JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master/media/03_javaDoc_Queue.PNG)
     
     StringQueue-Klasse:
     
@@ -142,7 +143,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     
 5.) Abänderungen der pom.xml, sodass die Entwicklerinformationen hinzugefügt worden sind, einen automatische Dokumentation mit Hilfe von Maven-Site erstellt werden kann und zusätzlich wurde noch Log4j (Version 2) integriert.
 
-5.1)Entwickler in das Konfigurationsfile hinzufügen:
+ 5.1)Entwickler in das Konfigurationsfile hinzufügen:
 
 ![developer pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_01.PNG)
     
@@ -155,15 +156,15 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
  
 ![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_03.PNG)
     
-5.4) Report Bereich 02(Automatische Dokumentation):
+ 5.4) Report Bereich 02(Automatische Dokumentation):
 
 ![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_04.PNG)
 
-5.5)Build Bereich(Automatische Dokumentation)
+ 5.5)Build Bereich(Automatische Dokumentation)
 
 ![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_05.PNG)
 
-6)Log4J laut Anweisung integriert. 
+6)Log4J laut Anweisung integriert und mit properties-file konfiguriert.
  Bei jeden Methodenaufrauf wird ein statischer Log auf der Kommandozeile ausgegeben.
  
 ![Log4J Ausschnitt Konsolenausgabe](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/06_Log4J.PNG)
@@ -177,7 +178,8 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 ![Maven-Site Beschreibung Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_02.png)
 
 8)Markdown Labreport
-  Auf Github kann mit Hilfe von Markdown Flavor Source Code mit Syntax-Highlighting eingefügt werden. Es wurde ein Beispiel mit Phyton und ein Beispiel it Java eingefügt.
+
+  Auf Github kann mit Hilfe von Github Markdown Flavour Source Code mit Syntax-Highlighting eingefügt werden. Es wurde ein Beispiel mit Phyton und ein Beispiel mit Java eingefügt.
 
 ##### Python Flavour ######
 ```python {Python-example}
