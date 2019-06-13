@@ -57,11 +57,11 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
   - [x] Übertragung Information aus Labreport Template.
   - [x] Alle Schritte dieser Übung nachvollziehbar erläutern.
   - [x] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
-  - [ ] Korrekturlesen Dokumentation
-  - [ ] PDF erstellen (zB Dillinger)
+  - [x] Korrekturlesen Dokumentation
+  - [x] PDF erstellen (zB Dillinger)
   
-- [ ] 11. Überprüfung Vollständigkeit der Abgabe
-- [ ] 12. Abgabe PDF Version der Abgabe
+- [x] 11. Überprüfung Vollständigkeit der Abgabe
+- [x] 12. Abgabe PDF Version der Abgabe
 
 ---
 
@@ -79,29 +79,29 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     **Richtig:** "this.maxSize = maxSize".
     
     Bug:
-    ![Construktor Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_01.png)
+    ![Construktor Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_01.PNG)
     
     Fix:
-    ![Construktor Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_01.png)
+    ![Construktor Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_01.PNG)
       
     2.) **Fehler** in remove() Methode: Vor der if-Abfrage wird mit
     'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
     **Lösung:** Entfernen dieser Zeile, da diese nicht sinnvoll.
     
     Bug:
-    ![remove() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_02.png)
+    ![remove() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_02.PNG)
 
   Fix:
-  ![remove() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_02.png)
+  ![remove() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_02.PNG)
 
     3.) **Fehler** in poll() Methode: Hier wird ein Element nur entfernt wenn die    "size == 0" ist, dies würde nie ein Element löschen solange die Queue nicht leer ist, wäre diese leer würde ein Element entfernt werden, welches eine Exception werfen würde.
     **Lösung:** Änderung der If-Abfrage auf "size > 0", sodass dies solange möglich ist, bis die Queue, keine Elemente mehr hat.
     
     Bug:
-    ![poll() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_03.png)
+    ![poll() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_03.PNG)
     
     Fix:
-    ![poll() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_03.png)
+    ![poll() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_03.PNG)
     
 - Erweiterungen/Optimierungen:
     - Der vorgegebene Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
@@ -112,15 +112,15 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
     Overview:
 
-    ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_overview.png)
+    ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_overview.PNG)
 
     Interface:
     
-    !JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_Queue.png)
+    !JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_Queue.PNG)
     
     StringQueue-Klasse:
     
-    ![JavaDoc StringQueue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_StringQueue.png)
+    ![JavaDoc StringQueue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_StringQueue.PNG)
 
 4.) Als nächstes werden Junit-Testcases in der Testklasse implementiert.
 - Test Default Konstruktor: Es wird getestet ob die Standard-Größe von 5 korrekt ist.
@@ -144,31 +144,31 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 5.1)Entwickler in das Konfigurationsfile hinzufügen:
 
-![developer pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_01.png)
+![developer pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_01.PNG)
     
  5.2) Log4j (Version 2) integrieren
  
-![log4j pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_02.png)
+![log4j pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_02.PNG)
 
  5.3)Automatisch generierte Dokumentation(Maven Site) mit integration von JavaDoc!
  Report Bereich(Automatische Dokumentation):
  
-![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_03.png)
+![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_03.PNG)
     
 5.4) Report Bereich 02(Automatische Dokumentation):
 
-![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_04.png)
+![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_04.PNG)
 
 5.5)Build Bereich(Automatische Dokumentation)
 
-![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_05.png)
+![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_05.PNG)
 
-6) Log4J laut Anweisung integriert. 
+6)Log4J laut Anweisung integriert. 
  Bei jeden Methodenaufrauf wird ein statischer Log auf der Kommandozeile ausgegeben.
  
-![Log4J Ausschnitt Konsolenausgabe](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/06_Log4J.png)
+![Log4J Ausschnitt Konsolenausgabe](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/06_Log4J.PNG)
 
-7) Mave-Site Dokumentation laut Anweisung implementiert. 
+7)Mave-Site Dokumentation laut Anweisung implementiert. 
  Hierbei wurde manuell eine Seite hinzugefügt, welche eine Queue beschreibt.
  Weiters wurde noch die "About" Seite manuel adaptiert.
  
@@ -176,7 +176,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 ![Maven-Site Beschreibung Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_02.png)
 
-8) Markdown Labreport
+8)Markdown Labreport
   Auf Github kann mit Hilfe von Markdown Flavor Source Code mit Syntax-Highlighting eingefügt werden. Es wurde ein Beispiel mit Phyton und ein Beispiel it Java eingefügt.
 
 ##### Python Flavour ######
