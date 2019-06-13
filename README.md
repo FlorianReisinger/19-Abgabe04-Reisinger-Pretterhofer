@@ -1,6 +1,7 @@
 # Lab Report #
 ## Vertiefende Gesamtwiederholung ##
 
+Abgabe: 04
 
 Student01: Thomas Pretterhofer
 
@@ -16,9 +17,9 @@ Repository: <a href="https://github.com/FlorianReisinger/19-Abgabe04-Reisinger-P
 - [x] 2. Einspielen Queue Vorlage aus Repository:  
 https://github.com/michaelulm/software-configuration-management/tree/master/test-automation/Queue  
             
-- [ ] 3. Taskergebnisse Schritt für Schritt auf Git stellen
-  - [ ] Führung Taskliste
-  - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
+- [x] 3. Taskergebnisse Schritt für Schritt auf Git stellen
+  - [x] Führung Taskliste
+  - [x] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
     
 - [x] 4. Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
   - [x] Es befinden sich gesamt 3 Fehler im Source Code.
@@ -49,13 +50,13 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
   - [x] Inklusive Javadoc Code und Javadoc Test Klassen
   - [x] Inklusive Menü mit Verweis auf manuell erstellte Seite
     - [x] Seite erläutert Funktionsweise Queue
-  - [] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
-    - [] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein
+  - [x] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
+    - [x] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein
     
-- [ ] 10. Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
-  - [ ] Übertragung Information aus Labreport Template.
-  - [ ] Alle Schritte dieser Übung nachvollziehbar erläutern.
-  - [ ] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
+- [x] 10. Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
+  - [x] Übertragung Information aus Labreport Template.
+  - [x] Alle Schritte dieser Übung nachvollziehbar erläutern.
+  - [x] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
   - [ ] Korrekturlesen Dokumentation
   - [ ] PDF erstellen (zB Dillinger)
   
@@ -78,29 +79,29 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     **Richtig:** "this.maxSize = maxSize".
     
     Bug:
-    ![Construktor Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_01.PNG)
+    ![Construktor Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_01.png)
     
     Fix:
-    ![Construktor Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_01.PNG)
+    ![Construktor Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_01.png)
       
     2.) **Fehler** in remove() Methode: Vor der if-Abfrage wird mit
     'element = "";' die Variable immer initialisiert, daher kann sie nie null werden.
     **Lösung:** Entfernen dieser Zeile, da diese nicht sinnvoll.
     
     Bug:
-    ![remove() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_02.PNG)
+    ![remove() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_02.png)
 
   Fix:
-  ![remove() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_02.PNG)
+  ![remove() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_02.png)
 
     3.) **Fehler** in poll() Methode: Hier wird ein Element nur entfernt wenn die    "size == 0" ist, dies würde nie ein Element löschen solange die Queue nicht leer ist, wäre diese leer würde ein Element entfernt werden, welches eine Exception werfen würde.
     **Lösung:** Änderung der If-Abfrage auf "size > 0", sodass dies solange möglich ist, bis die Queue, keine Elemente mehr hat.
     
     Bug:
-    ![poll() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_03.PNG)
+    ![poll() Bug](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_bug_03.png)
     
     Fix:
-    ![poll() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_03.PNG)
+    ![poll() Fix](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/02_fix_03.png)
     
 - Erweiterungen/Optimierungen:
     - Der vorgegebene Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
@@ -111,15 +112,15 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
     Overview:
 
-    ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_overview.PNG)
+    ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_overview.png)
 
     Interface:
     
-    !JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_Queue.PNG)
+    !JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_Queue.png)
     
     StringQueue-Klasse:
     
-    ![JavaDoc StringQueue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_StringQueue.PNG)
+    ![JavaDoc StringQueue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_StringQueue.png)
 
 4.) Als nächstes werden Junit-Testcases in der Testklasse implementiert.
 - Test Default Konstruktor: Es wird getestet ob die Standard-Größe von 5 korrekt ist.
@@ -128,47 +129,76 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
     Overview mit JUnit Testklasse:
     
-    ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_Overview.PNG)
+    ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_Overview.png)
 
     JUnit Testklasse Teil 1:
     
-    ![JavaDoc StringQueueTest 1](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_1.PNG)
+    ![JavaDoc StringQueueTest 1](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_1.png)
 
     JUnit Testklasse Teil 2:
     
-    ![JavaDoc StringQueueTest 2](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_2.PNG)
+    ![JavaDoc StringQueueTest 2](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_2.png)
     
     
 5.) Abänderungen der pom.xml, sodass die Entwicklerinformationen hinzugefügt worden sind, einen automatische Dokumentation mit Hilfe von Maven-Site erstellt werden kann und zusätzlich wurde noch Log4j (Version 2) integriert.
 
 5.1)Entwickler in das Konfigurationsfile hinzufügen:
 
-![developer pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_01.PNG)
+![developer pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_01.png)
     
  5.2) Log4j (Version 2) integrieren
  
-![log4j pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_02.PNG)
+![log4j pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_02.png)
 
  5.3)Automatisch generierte Dokumentation(Maven Site) mit integration von JavaDoc!
  Report Bereich(Automatische Dokumentation):
  
-![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_03.PNG)
+![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_03.png)
     
 5.4) Report Bereich 02(Automatische Dokumentation):
 
-![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_04.PNG)
+![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_04.png)
 
 5.5)Build Bereich(Automatische Dokumentation)
 
-![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_05.PNG)
+![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_05.png)
 
 6) Log4J laut Anweisung integriert. 
  Bei jeden Methodenaufrauf wird ein statischer Log auf der Kommandozeile ausgegeben.
  
-![Log4J Ausschnitt Konsolenausgabe](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/06_Log4J.PNG)
+![Log4J Ausschnitt Konsolenausgabe](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/06_Log4J.png)
 
 7) Mave-Site Dokumentation laut Anweisung implementiert. 
  Hierbei wurde manuell eine Seite hinzugefügt, welche eine Queue beschreibt.
  Weiters wurde noch die "About" Seite manuel adaptiert.
  
-![Maven-Site Dokumentation](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite.PNG)
+![Maven-Site Dokumentation](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_01.png)
+
+![Maven-Site Beschreibung Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_02.png)
+
+8) Markdown Labreport
+  Auf Github kann mit Hilfe von Markdown Flavor Source Code mit Syntax-Highlighting eingefügt werden. Es wurde ein Beispiel mit Phyton und ein Beispiel it Java eingefügt.
+
+##### Python Flavour ######
+```python {Python-example}
+ texts, labels = [], []
+        for line in data:
+            texts.append(line[length_label + 1:])
+            labels.append(line[:length_label])
+
+        return texts, labels
+```
+
+##### Java Flavour #####
+
+```java {Java-example}
+public static void calc(int number, int temp){
+    if((temp - 1) > 1) {
+      number = number * (temp - 1);
+      temp--;
+      calc(number, temp);
+    }
+    else {
+      System.out.printf("%d", number);
+    } 
+  }

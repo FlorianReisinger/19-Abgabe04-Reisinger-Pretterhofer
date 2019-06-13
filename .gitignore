@@ -15,8 +15,8 @@
 *.iml
 
 # Maven project
-Maven/SimpleAutomaticBuildProject/.build
-Maven/SimpleAutomaticBuildProject/target
+/.build
+/target
 
 # Package Files #
 *.jar
