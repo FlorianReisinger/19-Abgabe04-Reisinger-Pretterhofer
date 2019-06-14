@@ -67,9 +67,9 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 # Dokumentation #
 
-1.) Die Tasklist wurde in die Datei Readme.md kopiert und entsprechend der Markdown Syntax angepasst. Weiters wurde die Projektvorlage Queue in das Repository kopiert.
+**1.) Die Tasklist wurde in die Datei Readme.md kopiert und entsprechend der Markdown Syntax angepasst. Weiters wurde die Projektvorlage Queue in das Repository kopiert.**
 
-2.) Debugging der Klasse "Queue.java"
+**2.) Debugging der Klasse "Queue.java"**
 
 
 - Bugs:
@@ -108,7 +108,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     - Der vorgegebene Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
     - Default Constructor wurde manuell hinzugefügt, um den angegebenen Wert(int maxSize = 5) als default Wert zu nutzen und zu testen, da dieser sonst keine Funktion hat.
 
-3.) Es wurden JavaDoc Kommentare zur Klasse und zu den Methoden hinzugefügt.
+**3.) Es wurden JavaDoc Kommentare zur Klasse und zu den Methoden hinzugefügt.**
 - Nach dem hinzufügen der JavaDoc-Kommentare, haben wir einen JavaDoc-Bericht generiert:
 
     Overview:
@@ -123,7 +123,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     
     ![JavaDoc StringQueue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_StringQueue.PNG)
 
-4.) Als nächstes werden Junit-Testcases in der Testklasse implementiert.
+**4.) Als nächstes werden Junit-Testcases in der Testklasse implementiert.**
 - Test Default Konstruktor: Es wird getestet ob die Standard-Größe von 5 korrekt ist.
 - Test Konstruktor: Bei Queue-Größen von kleiner gleich null wird eine Exception geworfen, da die Queue mindestens 1 Element haben muss.
 - Alle Methoden werden einmal mit einer Queue-Größe von 1 (minimale Größe) und einer Queue-Größe von 99 (großer Wert) getestet.
@@ -141,7 +141,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     ![JavaDoc StringQueueTest 2](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_2.png)
     
     
-5.) Abänderungen der pom.xml, sodass die Entwicklerinformationen hinzugefügt worden sind, einen automatische Dokumentation mit Hilfe von Maven-Site erstellt werden kann und zusätzlich wurde noch Log4j (Version 2) integriert.
+**5.) Abänderungen der pom.xml, sodass die Entwicklerinformationen hinzugefügt worden sind, einen automatische Dokumentation mit Hilfe von Maven-Site erstellt werden kann und zusätzlich wurde noch Log4j (Version 2) integriert.**
 
  5.1)Entwickler in das Konfigurationsfile hinzufügen:
 
@@ -164,12 +164,12 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 ![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_05.PNG)
 
-6)Log4J laut Anweisung integriert und mit properties-file konfiguriert.
+**6)Log4J laut Anweisung integriert und mit properties-file konfiguriert.**
  Bei jeden Methodenaufrauf wird ein statischer Log auf der Kommandozeile ausgegeben.
  
 ![Log4J Ausschnitt Konsolenausgabe](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/06_Log4J.PNG)
 
-7)Mave-Site Dokumentation laut Anweisung implementiert. 
+**7)Mave-Site Dokumentation laut Anweisung implementiert.**
  Hierbei wurde manuell eine Seite hinzugefügt, welche eine Queue beschreibt.
  Weiters wurde noch die "About" Seite manuel adaptiert.
  
@@ -177,7 +177,7 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 ![Maven-Site Beschreibung Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_02.png)
 
-8)Markdown Labreport
+**8)Markdown Labreport**
 
   Auf Github kann mit Hilfe von Github Markdown Flavour Source Code mit Syntax-Highlighting eingefügt werden. Es wurde ein Beispiel mit Phyton und ein Beispiel mit Java eingefügt.
 
