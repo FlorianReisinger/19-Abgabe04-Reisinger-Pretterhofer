@@ -65,6 +65,8 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 
 ---
 
+<div style="page-break-after: always"></div>
+
 # Dokumentation #
 
 **1.) Die Tasklist wurde in die Datei Readme.md kopiert und entsprechend der Markdown Syntax angepasst. Weiters wurde die Projektvorlage Queue in das Repository kopiert.**
@@ -108,6 +110,9 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     - Der vorgegebene Konstruktor wurde um die Abfrage, ob maxSize kleiner gleich null ist erweitert, in diesem Fall wird eine Exception geworfen.
     - Default Constructor wurde manuell hinzugefügt, um den angegebenen Wert(int maxSize = 5) als default Wert zu nutzen und zu testen, da dieser sonst keine Funktion hat.
 
+<div style="page-break-after: always"></div>
+
+
 **3.) Es wurden JavaDoc Kommentare zur Klasse und zu den Methoden hinzugefügt.**
 - Nach dem hinzufügen der JavaDoc-Kommentare, haben wir einen JavaDoc-Bericht generiert:
 
@@ -119,6 +124,8 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     
     ![JavaDoc Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master/media/03_javaDoc_Queue.PNG)
     
+    <div style="page-break-after: always"></div>
+
     StringQueue-Klasse:
     
     ![JavaDoc StringQueue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/03_javaDoc_StringQueue.PNG)
@@ -132,30 +139,46 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
     
     ![JavaDoc Overview](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_Overview.png)
 
+  <div style="page-break-after: always"></div>
+
+
     JUnit Testklasse Teil 1:
     
     ![JavaDoc StringQueueTest 1](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_1.png)
+
+  <div style="page-break-after: always"></div>
+
 
     JUnit Testklasse Teil 2:
     
     ![JavaDoc StringQueueTest 2](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/04_JUnit_StringQueueTest_2.png)
     
-    
+  <div style="page-break-after: always"></div>
+
+
 **5.) Abänderungen der pom.xml, sodass die Entwicklerinformationen hinzugefügt worden sind, einen automatische Dokumentation mit Hilfe von Maven-Site erstellt werden kann und zusätzlich wurde noch Log4j (Version 2) integriert.**
 
  5.1)Entwickler in das Konfigurationsfile hinzufügen:
 
 ![developer pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_01.PNG)
     
+  <div style="page-break-after: always"></div>
+
+
  5.2) Log4j (Version 2) integrieren
  
 ![log4j pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_02.PNG)
+
+<div style="page-break-after: always"></div>
+
 
  5.3)Automatisch generierte Dokumentation(Maven Site) mit integration von JavaDoc!
  Report Bereich(Automatische Dokumentation):
  
 ![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_03.PNG)
     
+<div style="page-break-after: always"></div>
+
  5.4) Report Bereich 02(Automatische Dokumentation):
 
 ![automatedDocumentation pom.xml](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/05_pom_04.PNG)
@@ -176,6 +199,9 @@ https://github.com/michaelulm/software-configuration-management/tree/master/test
 ![Maven-Site Dokumentation](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_01.png)
 
 ![Maven-Site Beschreibung Queue](https://raw.githubusercontent.com/FlorianReisinger/19-Abgabe04-Reisinger-Pretterhofer/master//media/07_MavenSite_02.png)
+
+<div style="page-break-after: always"></div>
+
 
 **8)Markdown Labreport**
 
